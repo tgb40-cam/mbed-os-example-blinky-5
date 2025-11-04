@@ -12,6 +12,6 @@ int main() {
                 myled = 1; // LED is ON
                 wait(0.1); // 200 ms
                 myled = 0; // LED is OFF
-                wait(0.2)); // 1 sec
+                wait(0.2); // 1 sec
         }
 }
