@@ -4,20 +4,14 @@
  */
 
 #include "mbed.h"
-#include "platform/mbed_thread.h"
 
+DigitalOut myled(LED1);
 
-// Blinking rate in milliseconds
-#define BLINKING_RATE_MS                                                    500
-
-
-int main()
-{
-    // Initialise the digital pin LED1 as an output
-    DigitalOut led(LED1);
-
-    while (true) {
-        led = !led;
-        thread_sleep_for(BLINKING_RATE_MS);
-    }
+int main() {
+        while(true) {
+                myled = 1; // LED is ON
+                wait(0.2); // 200 ms
+                myled = 0; // LED is OFF
+                wait(1.0); // 1 sec
+        }
 }
